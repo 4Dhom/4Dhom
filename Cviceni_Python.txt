@@ -1,0 +1,17 @@
+zelenina = ["mrkev", "brambora", "kunda", "prdel"]
+ovoce = ["jabko", "banán"]
+
+pokracovat= "ano"
+pocet_slov = 0
+while pokracovat== "ano":
+    slovo = input("Zadejte název libovolného ovoce nebo zeleniny: \n")
+    if slovo in zelenina:
+        print("je to zeleny")
+    elif slovo in ovoce:
+        print("je to ovoc")
+    else:
+        print("nevim")
+    pocet_slov += 1
+    pokracovat = input("Přejete si zadat další příklad? [ano/ne]")
+print("Zadal jsi", pocet_slov, "slov")
+input()
