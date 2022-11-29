@@ -1,3 +1,4 @@
+# znovu si zkouším programovat cvičení z itnetwork.cz a  Checkio.org
 cisla = []
 cislo = "cokoliv"
 
