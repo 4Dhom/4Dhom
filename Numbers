@@ -5,9 +5,4 @@ def is_acceptable_password(password: str):
     return cond1
 
 print("Example:")
-print(is_acceptable_password("short"))
-
-assert is_acceptable_password("short")
-assert is_acceptable_password("muchlonger")
-assert is_acceptable_password("ashort")
-
+print(is_acceptable_password("short"))   #zadejte testovací slovo
