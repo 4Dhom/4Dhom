@@ -47,3 +47,26 @@ Medour.nalozit(8000)
 Medour.vylozit(250)
 
 print("Na káře je naloženo: {} kilo".format(Medour.naklad))
+
+class Clovek:       #člověk s únavou a běháním
+
+    def __init__(self, jmeno: str, unava = 0):
+        self.jmeno = jmeno
+        self.unava = unava
+
+    def spi(self, hodina):
+        self.hodina = hodina
+        self.unava -= hodina * 10
+        if self.unava < 0:
+            self.unava = 0
+
+    def bez(self, km):
+        self.unava += km
+        if self.unava > 20:
+            print("Už nemůžu")
+            self.unava = 20        
+
+Karel = Clovek("Karel", 20)
+Karel.spi(5)
+Karel.bez(150)
+    
