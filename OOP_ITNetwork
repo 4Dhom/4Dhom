@@ -25,3 +25,25 @@ vypocet.odecitani(120,5)
 vypocet.nasobeni(3,40)
 vypocet.podil(42,31)
 
+class NakladniAuto:     #budu nakládat a vykládat
+
+    def __init__(self, nosnost, naklad):  #mám káru, kerá uveze "nosnost" a zrovna na sobě má "náklad"
+        self.nosnost = nosnost
+        self.naklad = naklad
+
+    def nalozit(self, a: number) -> number:         #tímdle budu nakládat
+        self.naklad += a
+        if self.naklad > self.nosnost:
+            self.naklad = self.nosnost
+
+    def vylozit(self, b: number) -> number:             #tímdle budu vykládat
+        self.naklad -= b
+        if self.naklad < 0:
+            self.naklad = 0
+            
+Medour = NakladniAuto(2000, 250)
+Medour.nalozit(250)
+Medour.nalozit(8000)
+Medour.vylozit(250)
+
+print()
