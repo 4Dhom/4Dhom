@@ -26,4 +26,4 @@ def first_word(text: str) -> str:       #vypsání 1. slova
 
 
 print("Example:")
-print(first_word("Hello world"))            #testovací souvětí
+print(first_word("Hello world"))            #testovací souvětí, s

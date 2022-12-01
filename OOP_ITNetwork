@@ -19,7 +19,7 @@ class Kalkulacka:   #základní kalkulačka
         c = a + b
         print (c)
 
-vypocet = Kalkulacka()              #instance
+vypocet = Kalkulacka()              #instance, -> vs. __init__
 vypocet.scitani(5,5)
 vypocet.odecitani(120,5)
 vypocet.nasobeni(3,40)
