@@ -1,8 +1,29 @@
-def is_acceptable_password(password: str):
-    # your code here
+def is_acceptable_password(password: str):      #test delky hesla
     cond1 = len(password) > 6
     
     return cond1
 
 print("Example:")
 print(is_acceptable_password("short"))   #zadejte testovací slovo
+
+def is_even(num: int) -> bool:              #zjisteni sudosti cisla
+     return num % 2 == 0
+
+
+print("Example:")
+print(is_even(2))                   #zadejte testovací číslo
+
+def backward_string(val: str) -> str:       #obrácení pořadí písmen
+    return val [::-1]
+
+
+print("Example:")
+print(backward_string("val"))               #testovací slovo
+
+def first_word(text: str) -> str:       #vypsání 1. slova
+    osekany = text.rsplit(" ")          
+    return osekany[0]
+
+
+print("Example:")
+print(first_word("Hello world"))            #testovací souvětí
