@@ -63,8 +63,8 @@ class Clovek:       #člověk s únavou a běháním
     def bez(self, km):
         self.unava += km
         if self.unava > 20:
-            print("Už nemůžu")
-            self.unava = 20        
+            self.unava = 20        #smazal jsem vnitřní print "Sem unavenej" 
+                                    #<- třída by měla být stručná a výpisy na jiném místě
 
 Karel = Clovek("Karel", 20)
 Karel.spi(5)
