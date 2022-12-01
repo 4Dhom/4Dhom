@@ -40,10 +40,10 @@ class NakladniAuto:     #budu nakládat a vykládat
         self.naklad -= b
         if self.naklad < 0:
             self.naklad = 0
-            
+
 Medour = NakladniAuto(2000, 250)
 Medour.nalozit(250)
 Medour.nalozit(8000)
 Medour.vylozit(250)
 
-print()
+print("Na káře je naloženo: {} kilo".format(Medour.naklad))
