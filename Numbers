@@ -59,3 +59,33 @@ def is_acceptable_password(password: str):      #test delky hesla + má číslo?
     return all([cond1, cond2])
 
 print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def is_acceptable_password2(password: str):      #test delky hesla + má číslo, ale ne jen čísla?
+    cond1 = len(password) > 6 
+    cond2 = any(map(str.isdigit, password))
+    cond3 = any(map(str.isalpha, password))
+    return all([cond1, cond2, cond3])
+
+print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def is_acceptable_password3(password: str):      #test delky hesla + má číslo, ale ne jen čísla?
+    cond1 = len(password) > 6
+    cond2 = any(char.isdigit() for char in password)
+    cond3 = any(char.isalpha() for char in password)
+    if len(password) > 9: # cond4    
+        cond2 = cond3 = True
+    cond5 = 'password' not in password.lower()
+        
+    return all([cond1, cond2, cond3, cond5])
+
+print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))
+
