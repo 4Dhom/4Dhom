@@ -72,9 +72,9 @@ Karel.bez(150)
 
 class Lokace:       #textová hra s lokacemi a referencemi
 
-    def __init__(self, lokace):
+    def __init__(self, lokace, text):
         lokace = ["Hrad", "Les", "Les","Les", "Pláž", "Les", "Dům"]
-
+        
 
     def jdi(self, smer):
         smer = ["Západ", "Jih", "Sever", "Mordor"]
