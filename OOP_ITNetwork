@@ -69,4 +69,13 @@ class Clovek:       #člověk s únavou a běháním
 Karel = Clovek("Karel", 20)
 Karel.spi(5)
 Karel.bez(150)
-    
+
+class Lokace:       #textová hra s lokacemi a referencemi
+
+    def __init__(self, lokace):
+        lokace = ["Hrad", "Les", "Les","Les", "Pláž", "Les", "Dům"]
+
+
+    def jdi(self, smer):
+        smer = ["Západ", "Jih", "Sever", "Mordor"]
+        print("Můžeš jít směrem na {}").format(smer)    
