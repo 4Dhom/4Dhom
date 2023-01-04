@@ -89,3 +89,20 @@ def beginning_zeros(a: str) -> int:
       return len(a) - len(a.lstrip('0'))
 print(beginning_zeros("001001"))
 
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))
+
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))
