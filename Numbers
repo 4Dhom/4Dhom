@@ -1,0 +1,108 @@
+def is_acceptable_password(password: str):      #test delky hesla
+    cond1 = len(password) > 6
+    
+    return cond1
+
+print("Example:")
+print(is_acceptable_password("short"))   #zadejte testovací slovo
+
+def is_even(num: int) -> bool:              #zjisteni sudosti cisla
+     return num % 2 == 0
+
+
+print("Example:")
+print(is_even(2))                   #zadejte testovací číslo
+
+def backward_string(val: str) -> str:       #obrácení pořadí písmen
+    return val [::-1]
+
+
+print("Example:")
+print(backward_string("val"))               #testovací slovo
+
+def first_word(text: str) -> str:       #vypsání 1. slova
+    osekany = text.rsplit(" ")          
+    return osekany[0]
+
+
+print("Example:")
+print(first_word("Hello world"))            #testovací souvětí, s
+
+def number_length(value: int) -> int:       #počet číslic
+    return len(str(value))                  #ale nemám ošetřené výjimky a záporná čísla
+
+
+print("Example:")
+print(number_length(1))
+c = 3 * number_length(120)
+print(c)
+
+def checkio(number: int) -> str:           
+#"Fizz Buzz" if the number is divisible by 3 and by 5;
+#"Fizz" if the number is divisible by 3;
+#"Buzz" if the number is divisible by 5;
+#The number as a string for other cases.
+    if number % 3 ==0 and number % 5 ==0:
+        return "Fizz Buzz"
+    elif number % 3 == 0:
+        return "Fizz"
+    elif number % 5 ==0: 
+        return "Buzz"
+    else:
+        return str(number)
+
+print(checkio(6))
+
+def is_acceptable_password(password: str):      #test delky hesla + má číslo?
+    cond1 = len(password) > 6 
+    cond2 = any(map(str.isdigit, password))
+    return all([cond1, cond2])
+
+print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def is_acceptable_password2(password: str):      #test delky hesla + má číslo, ale ne jen čísla?
+    cond1 = len(password) > 6 
+    cond2 = any(map(str.isdigit, password))
+    cond3 = any(map(str.isalpha, password))
+    return all([cond1, cond2, cond3])
+
+print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def is_acceptable_password3(password: str):      #test delky hesla + má číslo, ale ne jen čísla?
+    cond1 = len(password) > 6
+    cond2 = any(char.isdigit() for char in password)
+    cond3 = any(char.isalpha() for char in password)
+    if len(password) > 9: # cond4    
+        cond2 = cond3 = True
+    cond5 = 'password' not in password.lower()
+        
+    return all([cond1, cond2, cond3, cond5])
+
+print(is_acceptable_password("dlouuuuheeejhes5el"))
+
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))
+
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))
+
+def between_markers(text: str, start: str, end: str) -> str:
+    # your code here  
+    return text[text.index(start)+1:text.index(end)]
+print(between_markers("What is >dve rukavice<", ">", "<"))
+
+def beginning_zeros(a: str) -> int:
+      return len(a) - len(a.lstrip('0'))
+print(beginning_zeros("001001"))

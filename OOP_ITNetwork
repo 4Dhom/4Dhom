@@ -1,0 +1,91 @@
+from typing import Iterable
+number = int | float
+
+class Kalkulacka:   #základní kalkulačka
+
+    def scitani(self, a: number, b: number) -> number:  # self vždy, 2 paramatry a a b
+        c = a + b
+        print (c)
+
+    def odecitani(self, a: number, b: number) -> number:
+        c = a - b
+        print (c)
+   
+    def nasobeni(self, a: number, b: number) -> number:
+        c = a * b
+        print (c)
+
+    def podil(self, a: number, b: number) -> number:
+        c = a + b
+        print (c)
+
+vypocet = Kalkulacka()              #instance, -> vs. __init__
+vypocet.scitani(5,5)
+vypocet.odecitani(120,5)
+vypocet.nasobeni(3,40)
+vypocet.podil(42,31)
+
+class NakladniAuto:     #budu nakládat a vykládat
+
+    def __init__(self, nosnost, naklad):  #mám káru, kerá uveze "nosnost" a zrovna na sobě má "náklad"
+        self.nosnost = nosnost
+        self.naklad = naklad
+
+    def nalozit(self, a: number) -> number:         #tímdle budu nakládat
+        self.naklad += a
+        if self.naklad > self.nosnost:
+            self.naklad = self.nosnost
+
+    def vylozit(self, b: number) -> number:             #tímdle budu vykládat
+        self.naklad -= b
+        if self.naklad < 0:
+            self.naklad = 0
+
+Medour = NakladniAuto(2000, 250)
+Medour.nalozit(250)
+Medour.nalozit(8000)
+Medour.vylozit(250)
+
+print("Na káře je naloženo: {} kilo".format(Medour.naklad))
+
+class Clovek:       #člověk s únavou a běháním
+
+    def __init__(self, jmeno: str, unava = 0):
+        self.jmeno = jmeno
+        self.unava = unava
+
+    def spi(self, hodina):
+        self.hodina = hodina
+        self.unava -= hodina * 10
+        if self.unava < 0:
+            self.unava = 0
+
+    def bez(self, km):
+        self.unava += km
+        if self.unava > 20:
+            self.unava = 20        #smazal jsem vnitřní print "Sem unavenej" 
+                                    #<- třída by měla být stručná a výpisy na jiném místě
+
+Karel = Clovek("Karel", 20)
+Karel.spi(5)
+Karel.bez(150)
+
+class Lokace:       #textová hra s lokacemi a referencemi
+
+    def __init__(self, lokace, text):
+        lokace = ["Hrad", "Les", "Les","Les", "Pláž", "Les", "Dům"]
+        
+
+    def jdi(self, smer):
+        smer = ["Západ", "Jih", "Sever", "Mordor"]
+        print("Můžeš jít směrem na {}").format(smer)    
+        
+class Lokace:       #textová hra s lokacemi a referencemi
+
+    def __init__(self, lokace, text):
+        lokace = ["Hrad", "Les", "Les","Les", "Pláž", "Les", "Dům"]
+        
+
+    def jdi(self, smer):
+        smer = ["Západ", "Jih", "Sever", "Mordor"]
+        print("Můžeš jít směrem na {}").format(smer)    
